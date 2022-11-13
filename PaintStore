@@ -1,0 +1,26 @@
+CREATE TABLE PaintStore (IDname TEXT, InStock INTEGER, PaintType TEXT, Opacty INTEGER, GlossMatte TEXT, PricePerGal INTEGER);
+INSERT INTO PaintStore VALUES ("Noir", 4, "Automotive", 4, "Matte", 10.99);
+INSERT INTO PaintStore VALUES ("SkyBlue", 3, "Outdoor", 2, "Gloss", 13.99);
+INSERT INTO PaintStore VALUES ("Coral", 2, "Indoor", 1, "Matte", 14.99);
+INSERT INTO PaintStore VALUES ("Bronze", 3, "Automotive", 3, "Matte", 16.99);
+INSERT INTO PaintStore VALUES ("Lemon", 1, "Outdoor", 4, "Matte", 12.99);
+INSERT INTO PaintStore VALUES ("ForestGreen", 7, "Automotive", 3, "Gloss", 25.99);
+INSERT INTO PaintStore VALUES ("PrussianBlue", 10, "Automotive", 3, "Gloss", 14.99);
+INSERT INTO PaintStore VALUES ("Vermilion", 8, "Outdoor", 3, "Matte", 15.99);
+INSERT INTO PaintStore VALUES ("Marigold", 5, "Outdoor", 4, "Gloss", 17.99);
+INSERT INTO PaintStore VALUES ("Salmon", 9, "Indoor", 2, "Matte", 12.99);
+INSERT INTO PaintStore VALUES ("Perrywinkle", 13, "Indoor", 3, "Gloss", 16.99);
+INSERT INTO PaintStore VALUES ("Lavender", 11, "Automotive", 3, "Matte", 26.99);
+INSERT INTO PaintStore VALUES ("Magenta", 16, "Outdoor", 2, "Gloss", 14.99);
+INSERT INTO PaintStore VALUES ("Indigo", 8, "Outdoor", 5, "Matte", 18.99);
+INSERT INTO PaintStore VALUES ("SunsetRed", 9, "Automotive", 4, "Gloss", 24.99);
+SELECT * FROM PaintStore WHERE Opacity <= 4 ORDER BY PricePerGal;
+
+--What is the AVG price of items in Automotive section?
+SELECT AVG (PricePerGal) "AVG Automotive item price"
+FROM PaintStore;
+
+--Display * paint where opacity is less than or equal to 4
+SELECT * FROM PaintStore WHERE opacity <=4 ORDER BY PricePerGal;
+
+  
